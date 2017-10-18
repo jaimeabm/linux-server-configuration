@@ -1,0 +1,942 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>README</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-project-5-linux-server-configuration-project" class="anchor" href="#project-5-linux-server-configuration-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project 5: Linux Server Configuration Project</h1>
+<h3>
+<a id="user-content-by-jaime-banda" class="anchor" href="#by-jaime-banda" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>by Jaime Banda</h3>
+<p>This is the fifth project of the <a href="https://classroom.udacity.com/nanodegrees/nd004/parts/8d3e23e1-9ab6-47eb-b4f3-d5dc7ef27bf0/modules/348776022975462/lessons/3487760229239847/concepts/36269487530923">Udacity Full-Stack Nanodegree - Linux Server Configuration,
+Nanodegree</a>.</p>
+<h2>
+<a id="user-content-what-it-is-and-does" class="anchor" href="#what-it-is-and-does" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it is and does</h2>
+<p>This is the baseline installation of a Linux server and prepare it to host a Flask web application. The server will be secure from a number of attack vectors, by installing and configuring a database server, a firewall, updates and deploy an existing web application onto it.</p>
+<p>Here are some URLs structures that the application follow to manage the catalog:</p>
+<h2>
+<a id="user-content-get-a-server-on-lightsail" class="anchor" href="#get-a-server-on-lightsail" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get a server on Lightsail</h2>
+<p>We're going to get a server in Amazon Lightsail for this project. There are a few things you need to do when you create your server instance.</p>
+<ol>
+<li>
+<p>Log in!
+First, log in to Lightsail. If you don't already have an Amazon Web Services account, you'll be prompted to create one. Amazon Web Services login page.</p>
+</li>
+<li>
+<p>Create an instance.
+Once you're logged in, Lightsail will give you a friendly message with a robot on it, prompting you to create an instance. A Lightsail instance is a Linux server running on a virtual machine inside an Amazon datacenter. When you have no instances, Lightsail gives you a picture of an orange robot and suggests that you create an instance.</p>
+</li>
+<li>
+<p>Choose an instance image: Ubuntu
+Lightsail supports a lot of different instance types. An instance image is a particular software setup, including an operating system and optionally built-in applications.</p>
+</li>
+</ol>
+<p>For this project, you'll want a plain Ubuntu Linux image. There are two settings to make here. First, choose "OS Only" (rather than "Apps + OS"). Second, choose Ubuntu as the operating system.When you create an instance, Lightsail asks what kind you want.
+For this project, choose an "OS Only" instance with Ubuntu.</p>
+<ol start="4">
+<li>
+<p>Choose your instance plan.
+The instance plan controls how powerful of a server you get. It also controls how much money they want to charge you. For this project, the lowest tier of instance is just fine. And as long as you complete the project within a month and shut your instance down, the price will be zero. Lightsail's options for instance pricing.
+For this project, pick the lowest one to get free-tier access.
+Be aware: If you enable additional features in Lightsail, you may be charged extra for them.</p>
+</li>
+<li>
+<p>Give your instance a hostname.
+Every instance needs a unique hostname. You can use any name you like, as long as it doesn't have spaces or unusual characters in it. Your instance's name will be visible to you and to the project reviewer.</p>
+</li>
+<li>
+<p>Wait for it to start up.
+It may take a few minutes for your instance to start up. While your instance is starting up, Lightsail shows you a grayed-out display.Once your instance is running, the display gets brighter.</p>
+</li>
+<li>
+<p>It's running; let's use it!
+Once your instance has started up, you can log into it with SSH from your browser. The public IP address of the instance is displayed along with its name. In the above picture it's 35.165.26.190.</p>
+</li>
+<li>
+<p>Project time.
+Now that you have a working instance, you can get right into the project!</p>
+</li>
+</ol>
+<h2>
+<a id="user-content-setting-up-the-server" class="anchor" href="#setting-up-the-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up the server</h2>
+<ol>
+<li>Update the available package list</li>
+</ol>
+<pre><code>sudo apt-get update
+</code></pre>
+<ol start="2">
+<li>Upgrade installed packages.</li>
+</ol>
+<pre><code>sudo apt-get upgrade
+</code></pre>
+<ol start="3">
+<li>Remove packages no longer required (automatically removed).</li>
+</ol>
+<pre><code>sudo apt-get autoremove
+</code></pre>
+<ol start="4">
+<li>Install finger to get information about a user.</li>
+</ol>
+<pre><code>sudo apt-get install finger
+</code></pre>
+<ol start="5">
+<li>Upgrade python2  python3 &amp; memcached</li>
+</ol>
+<pre><code>sudo apt-get upgrade python2
+sudo apt-get upgrade python3
+sudo apt-get install memcached
+</code></pre>
+<ol start="7">
+<li>Install Apache httpd server</li>
+</ol>
+<pre><code>sudo apt-get install apache2
+</code></pre>
+<ol start="8">
+<li>Create a new user for grader</li>
+</ol>
+<pre><code>sudo adduser grader
+</code></pre>
+<ol start="9">
+<li>Add user to the sudoers by creating the file with these commands</li>
+</ol>
+<pre><code>sudo cp /etc/sudoers.d/90-init-user /etc/sudoers.d/grader
+sudo nano /etc/sudoers.d/grader
+</code></pre>
+<ol start="10">
+<li>Change the user from '90-init-user' to 'grader'</li>
+</ol>
+<pre><code>grader ALL=(ALL) NOPASSWD:ALL
+</code></pre>
+<ol start="11">
+<li>Generate key-pair for user grader (NOT ON THE SERVER, GENERATE IT IN YOUR PC)</li>
+</ol>
+<pre><code>ssh-keygen
+</code></pre>
+<ol start="12">
+<li>Create and change ownership of the files</li>
+</ol>
+<pre><code>sudo mkdir /home/grader/.ssh
+sudo touch /home/grader/.ssh/authorized_keys
+sudo chown grader /home/grader/.ssh/authorized_keys
+sudo chown :grader /home/grader/.ssh/authorized_keys
+sudo chown grader /home/grader/.ssh
+sudo chown :grader /home/grader/.ssh
+</code></pre>
+<ol start="13">
+<li>
+<p>Copy the content of the key in the server to the <code>/home/gader/.ssh/authorized_keys</code> file</p>
+</li>
+<li>
+<p>Change the permission on the .ssh directory and on the authorized_key file.</p>
+</li>
+</ol>
+<pre><code>sudo chmod 700 /home/grader/.ssh
+sudo chmod 644 /home/grader/.ssh/.authorized_keys
+</code></pre>
+<ol start="15">
+<li>Forcing key based authentication and update ssh port from 22 to 2200</li>
+</ol>
+<pre><code>sudo nano /etc/ssh/sshd_config
+</code></pre>
+<p>update file on:</p>
+<pre><code>.
+.
+Port 22000
+.
+.
+PasswordAuthentication no
+
+</code></pre>
+<ol start="16">
+<li>
+<p>Open port 2200 on the network tab on the Lightsail website</p>
+</li>
+<li>
+<p>Install git with <code>sudo apt-get install git</code></p>
+</li>
+<li>
+<p>If project built in python 3, install the python3 mod_wsgi package on the server.</p>
+</li>
+</ol>
+<pre><code>sudo apt-get install libapache2-mod-wsgi-py3
+</code></pre>
+<ol start="19">
+<li>Install pip for python2 and python3</li>
+</ol>
+<pre><code>sudo apt-get install pip
+sudo apt-get install pip3
+</code></pre>
+<ol start="20">
+<li>Restar the ssh service</li>
+</ol>
+<pre><code>sudo service ssh restard
+</code></pre>
+<ol start="21">
+<li>Setting up the firewall</li>
+</ol>
+<pre><code>sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 2200/tcp
+sudo ufw allow ssh
+sudo ufw allow www
+sudo ufw allow ntp
+sufo ufw allow 123/udp
+sudo ufw enable
+</code></pre>
+<ol start="22">
+<li>Configure apache to hand-off certain requests to an application handler-mod-wsgi. The first step is to install mod_wsgi</li>
+</ol>
+<pre><code>sudo apt-get install libapache2-mod_wsgi
+</code></pre>
+<h2>
+<a id="user-content-install-postgresql" class="anchor" href="#install-postgresql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install PostgreSQL</h2>
+<ol>
+<li><code>sudo apt-get install libpq-dev python-dev</code></li>
+<li><code>sudo apt-get install postgresql postgresql-contrib</code></li>
+<li><code>sudo su - postgres</code></li>
+<li><code>psql</code></li>
+<li><code>CREATE USER catalog WITH PASSWORD 'password';</code></li>
+<li><code>ALTER USER catalog CREATEDB;</code></li>
+<li><code>CREATE DATABASE catalog WITH OWNER catalog;</code></li>
+<li><code>\c catalog</code></li>
+<li><code>REVOKE ALL ON SCHEMA public FROM public;</code></li>
+<li><code>GRANT ALL ON SCHEMA public TO catalog;</code></li>
+<li><code>\q</code></li>
+<li><code>exit</code></li>
+<li><code>Change create engine line in your __init__.py and db.py to: engine = create_engine('postgresql://catalog:password@localhost/catalog')</code></li>
+</ol>
+<h2>
+<a id="user-content-project-contents" class="anchor" href="#project-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project contents</h2>
+<p>This project consists for the following files:</p>
+<ul>
+<li>readme.md. - Steps to setup the server.</li>
+<li>graderkey - SSH private key to access the server 35.165.26.190.</li>
+</ul>
+<h2>
+<a id="user-content-how-to-run-project" class="anchor" href="#how-to-run-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Run Project</h2>
+<p>Connect to the server from terminal with the following instruction</p>
+<pre><code>ssh grader@35.165.26.190 -p 2200 -i ~/.ssh/graderkey
+</code></pre>
+<h3>
+<a id="user-content-access-the-current-project-website" class="anchor" href="#access-the-current-project-website" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Access the current project website</h3>
+<p>Open your browser to the following URL:</p>
+<pre><code>http://35.165.26.190/
+</code></pre>
+</article></body></html>
